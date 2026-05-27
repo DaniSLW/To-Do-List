@@ -9,21 +9,17 @@ let theme = localStorage.getItem("theme") || "dark";
 
 document.body.classList.toggle("light", theme === "light");
 
-// Toggle theme
 toggleThemeBtn.addEventListener("click", () => {
     document.body.classList.toggle("light");
     theme = document.body.classList.contains("light") ? "light" : "dark";
     localStorage.setItem("theme", theme);
 });
 
-// Load tasks
 loadTasks();
 renderTasks();
 
-// Add task
 button.addEventListener("click", addTask);
 
-// Enter key support
 input.addEventListener("keydown", (e) => {
     if (e.key === "Enter") addTask();
 });
