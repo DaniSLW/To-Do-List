@@ -55,7 +55,7 @@ function renderTasks() {
 
         // Mark button
         const markBtn = document.createElement("button");
-        markBtn.textContent = task.completed ? "Undo" : "Mark";
+        markBtn.textContent = task.completed ? "Unmark" : "Mark";
         markBtn.classList.add("mark-btn");
 
         markBtn.addEventListener("click", (e) => {
@@ -84,11 +84,18 @@ function renderTasks() {
     });
 
     updateCounter();
+    checkTasks();
+}
+
+function checkTasks() {
+    if (tasks.length === 0) {
+        counter.textContent = "No tasks yet!"
+    }
 }
 
 function updateCounter() {
     const remaining = tasks.filter(task => !task.completed).length;
-    counter.textContent = `Remaining: ${remaining} / ${tasks.length}`;
+    counter.textContent = `Tasks: ${remaining} of ${tasks.length} remaining`;
 }
 
 function saveTasks() {
