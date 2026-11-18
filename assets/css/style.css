@@ -183,21 +183,51 @@ li .delete-btn:hover {
 }
 
 /* ===== Light Mode ===== */
-/* body.light {
-    background-color: #f5f5f5;
-    color: #111;
+body.light {
+    background: linear-gradient(135deg, #e8ecf4, #f7f9fc);
+    color: #1c1e24;
 }
 
-body.light input {
-    background-color: #fff;
-    color: #111;
+body.light .container {
+    background: linear-gradient(-135deg, #ffffff, #f0f3fa);
+    border-color: #d1d9e6;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+body.light .container-title .toggleThemeBtn button svg {
+    fill: #f59e0b;
+    filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.6));
+}
+
+body.light .container-title .toggleThemeBtn button:hover svg {
+    fill: #4f46e5;
+    filter: drop-shadow(0 0 8px rgba(79, 70, 229, 0.6));
+}
+
+body.light .input-group {
+    background-color: rgba(99, 102, 241, 0.15);
+}
+
+body.light .input-group input {
+    background: #ffffff;
+    color: #1c1e24;
+}
+
+body.light .input-group button {
+    background-color: #6366f1 !important;
+    color: #ffffff;
+}
+
+body.light #counter {
+    color: #555;
 }
 
 body.light li {
-    background-color: #e1e1e1;
+    background: #ffffff;
+    border-color: #dce1eb;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-body.light #addBtn {
-    background-color: #111;
-    color: #fff;
-} */
+body.light li.completed {
+    background-color: #e2e6ef;
+}
